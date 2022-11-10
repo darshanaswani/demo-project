@@ -1,0 +1,13 @@
+.auctions-container {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  padding-bottom: 50px;
+  background-color: #f6f7f8;
+  align-items: center;
+}
+.auctions-title {
+  letter-spacing: 2px;
+  font-size: 1.875rem;
+}

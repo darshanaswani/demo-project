@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import LineChart from "../Chart/Chart.component";
 import { fetchAuctionsAsyncData } from "../../store/auctions/auctions.actions";
 import { useDispatch, useSelector } from "react-redux";
+import "./Auctions.styles.css";
 
 const Auctions = () => {
   const dispatch = useDispatch();
   const auctionsDataSelector = useSelector(
     (state) => state.auctions.auctionsData.data
   );
-  console.log(auctionsDataSelector);
 
   const AuctionsData = {
     labels: auctionsDataSelector?.map((data) => data.title),
@@ -16,8 +16,8 @@ const Auctions = () => {
       {
         label: "Sell Price",
         data: auctionsDataSelector?.map((data) => data.currencyPrice.realUsd),
-        borderColor: "yellow",
-        borderWidth: 2,
+        borderColor: "#cc8614",
+        borderWidth: 3,
       },
     ],
   };
@@ -28,9 +28,12 @@ const Auctions = () => {
 
   return (
     <div className="auctions-container">
-      <h2 className="auctions-title">Auctions</h2>
-
-      <LineChart chartData={AuctionsData} />
+      <div className="auctions-title-container">
+        <h2 className="auctions-title">AUCTIONS</h2>
+      </div>
+      <div style={{ width: 1100 }}>
+        <LineChart chartData={AuctionsData} />
+      </div>
     </div>
   );
 };

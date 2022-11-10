@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMarketPlaceAsyncData } from "../../store/marketplace/marketplace.actions";
-import MarketPlaceTable from "../MarketPlaceTable/MarketPlaceTable.component";
+import TopMarketPlace from "../TopMarketPlace/TopMarketPlace.component";
 import MarketPlaceCounts from "../MarketPlaceCounts/MarketPlaceCounts.component";
+import "./MarketPlace.styles.css";
 
 const MarketPlace = () => {
   const dispatch = useDispatch();
@@ -20,13 +21,14 @@ const MarketPlace = () => {
   }, [marketPlaceCountsData]);
 
   return (
-    <div className="market-place-container">
-      <h2>MARKET PLACE</h2>
+    <div className="market-place">
+      <div className="market-place-container">
+        <h2 className="market-place-heading">MARKET PLACE</h2>
 
-      <MarketPlaceCounts data={countsData} />
+        <MarketPlaceCounts data={countsData} />
 
-      <h3>TOP 3 MARKET PLACES</h3>
-      <MarketPlaceTable />
+        <TopMarketPlace />
+      </div>
     </div>
   );
 };

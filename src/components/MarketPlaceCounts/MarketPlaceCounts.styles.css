@@ -1,0 +1,11 @@
+.market-place-counts-container{
+    padding-bottom: 20px;
+}
+.market-place-counts-link {
+  cursor: pointer;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.063rem;
+  padding: 10px 40px 40px 20px;
+}

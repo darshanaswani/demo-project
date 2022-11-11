@@ -22,13 +22,11 @@ const MarketPlace = () => {
 
   return (
     <div className="market-place">
-      <div className="market-place-container">
-        <h2 className="market-place-heading">MARKET PLACE</h2>
+      <h2 className="market-place-heading">MARKET PLACE</h2>
 
-        <MarketPlaceCounts data={countsData} />
+      <MarketPlaceCounts data={countsData} />
 
-        <TopMarketPlace />
-      </div>
+      <TopMarketPlace />
     </div>
   );
 };
